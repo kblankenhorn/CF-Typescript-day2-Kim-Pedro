@@ -1,4 +1,4 @@
-"use strict"
+
 class Person{
 	firstName = "";
 	lastName = "";
@@ -24,4 +24,22 @@ class Person{
 	 let fullName = new Person("Mario", "Nelson", "IT", "30");
      console.log(fullName.whoAreYou());
 
+class More extends Person {
+	salary: string = " ";
+	location: string = " ";
+	
 
+	constructor(firstName, lastName, job, age, salary, location){
+	super(firstName, lastName, job, age);
+	this.location=location;
+	this.salary = salary;
+	}
+
+	whoAreYou() {
+	return `${super.whoAreYou()} and I get ${this.salary} in ${this.location}`;
+}
+
+}
+
+let employee = new More("Mario", "Nelson", "IT", "30", "3000EUR", "Vienna");
+console.log(employee.whoAreYou());
