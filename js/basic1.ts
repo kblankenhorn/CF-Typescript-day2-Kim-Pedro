@@ -3,7 +3,7 @@ class Person{
 	firstName = "";
 	lastName = "";
 	job = "";
-	age = ""
+	age = "";
 
 	
 	constructor(firstName, lastName, job, age) {
